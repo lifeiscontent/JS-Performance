@@ -31,7 +31,7 @@
    */
 
   __elementPrototype.addClass = function(className) {
-    return (this.hasClass(className)) ? false : !!(this.className += ' '+className);
+    return this.hasClass(className) ? false : !!(this.className += ' '+className);
   };
 
   /**
@@ -43,6 +43,6 @@
    */
 
   __elementPrototype.removeClass = function(className) {
-    return (this.hasClass(className)) ? !!(this.className = this.className.replace(className, '')) : false;
+    return this.hasClass(className) ? !!(this.className = this.className.replace(className, '')) : false;
   };
 })();
